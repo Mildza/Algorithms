@@ -66,3 +66,52 @@ const longestStrings = (arr) => {
 };
 
 longestStrings(["bad", "ab", "lsd", "gag", "a", "dr"]); // [ 'bad', 'lsd', 'gag' ]
+
+//****************************************************************//
+
+// 6.Given a sequence of array of integers, determine if it is possible to obtain strictly
+// increasing sequence by removing no more than one element from the array.
+
+const sequence = (arr) => {
+  const result = [];
+  for (i = 0; i < arr.length; i++) {
+    const arrSpliced = [...arr];
+    arrSpliced.splice(i, 1);
+    const temp = [];
+    for (j = 0; j < arrSpliced.length - 1; j++) {
+      if (arrSpliced[j + 1] > arrSpliced[j]) {
+        temp.push(true);
+      } else {
+        temp.push(false);
+      }
+    }
+    temp.some((el) => el === false) ? result.push(false) : result.push(true);
+  }
+  result.some((el) => el === true)
+    ? console.log("It can be strictly increaseing")
+    : console.log("It can not be strictly increaseing");
+};
+
+sequence([1, 3, 2]);
+sequence([1, 3, 2, 1]);
+sequence([1, 5, 2, 4]);
+//****************************************************************//
+
+// 7. Given string, replace each character by the next one (English alphabet, z would replace by a)
+const enigma = (task) => {
+  const result = [];
+  for (i = 0; i < task.length; i++) {
+    let temp = task.charCodeAt(i);
+    if (temp === 122) {
+      temp = 97;
+    } else if (temp === 90) {
+      temp = 65;
+    } else {
+      temp = temp + 1;
+    }
+    result.push(String.fromCharCode(temp));
+  }
+  console.log(result.join(""));
+};
+
+enigma("AbzdZ");
