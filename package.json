@@ -4,7 +4,7 @@
   "description": "Algorithms Challenge",
   "main": "Part1.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon Part1.js"
   },
   "author": "Mildza",
   "license": "ISC"
