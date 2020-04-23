@@ -1,4 +1,4 @@
-// 1.Function that returns the sum of all numbers
+// 1. Function that returns the sum of all numbers
 
 const sumAll = (...listOfNumbers) => {
   let result = 0;
@@ -10,7 +10,7 @@ sumAll(1, 2, 3, 4, 5); // 15
 sumAll(1, 2, 3, 4, 6, 7, 8, 9, 10); // 50
 //****************************************************************//
 
-// 2.To given rectangular matrix of characters add a border of astrisk(*)
+// 2. To given rectangular matrix of characters add a border of astrisk(*)
 
 const addBorder = (picture) => {
   const wall = "*".repeat(picture[0].length + 2);
@@ -26,7 +26,7 @@ addBorder(["abc", "def"]); // [ '*****', '*abc*', '*def*', '*****' ]
 addBorder(["abcd", "efgh"]); // [ '******', '*abcd*', '*efgh*', '******' ]
 //****************************************************************//
 
-// 3.For given integer return the sum of its digits.
+// 3. For given integer return the sum of its digits.
 
 const sumOfDigits = (num) => {
   const arr = [...num.toString()];
@@ -40,7 +40,7 @@ sumOfDigits(235); // 10
 
 //****************************************************************//
 
-// 4.For given array of integers, find the pair of adjacent element that has the largest product.
+// 4. For given array of integers, find the pair of adjacent element that has the largest product.
 
 const largestProduct = (arr) => {
   let max = 0;
@@ -54,7 +54,7 @@ const largestProduct = (arr) => {
 largestProduct([3, 6, -2, -5, 7, 3]); // 21
 //****************************************************************//
 
-// 5.For a given array of strings, return another array containing all of its longest strings.
+// 5. For a given array of strings, return another array containing all of its longest strings.
 
 const longestStrings = (arr) => {
   let longest = 0;
@@ -69,7 +69,7 @@ longestStrings(["bad", "ab", "lsd", "gag", "a", "dr"]); // [ 'bad', 'lsd', 'gag'
 
 //****************************************************************//
 
-// 6.Given a sequence of array of integers, determine if it is possible to obtain strictly
+// 6. Given a sequence of array of integers, determine if it is possible to obtain strictly
 // increasing sequence by removing no more than one element from the array.
 
 const sequence = (arr) => {
@@ -92,12 +92,12 @@ const sequence = (arr) => {
     : console.log("It can not be strictly increaseing");
 };
 
-sequence([1, 3, 2]);
-sequence([1, 3, 2, 1]);
-sequence([1, 5, 2, 4]);
+sequence([1, 3, 2]); // true
+sequence([1, 3, 2, 1]); // false
+sequence([1, 5, 2, 4]); // true
 //****************************************************************//
 
-// 7. Given string, replace each character by the next one (English alphabet, z would replace by a)
+// 7. Given string, replace each character by the next one (English alphabet, z would replace by a).
 const enigma = (task) => {
   const result = [];
   for (i = 0; i < task.length; i++) {
@@ -114,4 +114,27 @@ const enigma = (task) => {
   console.log(result.join(""));
 };
 
-enigma("AbzdZ");
+enigma("AbzdZ"); // BcaeA
+
+//****************************************************************//
+
+// 8. Check whether the given string is a subsequence of the plaintext alphabet.
+
+const subsequence = (task) => {
+  const result = [];
+  for (i = 0; i < task.length - 1; i++) {
+    if (task.charCodeAt(i) >= task.charCodeAt(i + 1)) {
+      result.push(false);
+    } else {
+      result.push(true);
+    }
+  }
+  result.some((el) => el === false)
+    ? console.log("Its not")
+    : console.log("Its ok");
+};
+
+subsequence("abc"); // Ok
+subsequence("amz"); // Ok
+subsequence("cdce"); // Not
+subsequence("abbj"); // Not
