@@ -138,3 +138,49 @@ subsequence("abc"); // Ok
 subsequence("amz"); // Ok
 subsequence("cdce"); // Not
 subsequence("abbj"); // Not
+
+//****************************************************************//
+
+// 9. For a given array of positive integers, return array of two integers, sum of even and odd values.
+
+const evenOdd = (arr) => {
+  let even = 0;
+  let odd = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 === 0) {
+      even += arr[i];
+    } else {
+      odd += arr[i];
+    }
+  }
+  console.log([even, odd]);
+};
+
+evenOdd([50, 60, 60, 45, 70]); // [180,105]
+
+//****************************************************************//
+
+// 10. Two array are called similiar if one can be obtained from another by swapping at most one pair of elements in one of the arrays.
+
+const similiar = (a, b) => {
+  const c = [];
+  let d = [];
+  if (a.toString() === b.toString()) {
+    return console.log("They are equal");
+  }
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) {
+      c.push(a[i]);
+      d.push(b[i]);
+    }
+  }
+  d = d.reverse();
+  if (c.length === 2 && c.toString() === d.toString()) {
+    return console.log("They are similiar");
+  }
+  return console.log("They are not similiar");
+};
+
+similiar([1, 2, 3], [1, 2, 3]); // true
+similiar([1, 2, 3], [2, 1, 3]); // true
+similiar([1, 2, 2], [2, 1, 1]); // false
