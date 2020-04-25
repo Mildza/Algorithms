@@ -12,3 +12,11 @@
 8. Check whether the given string is a subsequence of the plaintext alphabet.
 9. For a given array of positive integers, return array of two integers, sum of even and odd values.
 10. Two array are called similiar if one can be obtained from another by swapping at most one pair of elements in one of the arrays.
+
+## Part 2
+
+1. For a given array of integers, on each move it's allowed to increase exactly one of it's element by one. Find the minimal moves required to obtain a strictly increasing sequence from the input.
+
+2. After algorithm has finished, there will be a single element left in the array.
+   On the 1st, 3rd, 5th ... iterations replace each pair of consecutive elements with their sum.
+   On the 2nd, 4th, 6th ... iterations replace each pair of consecutive elements with their product.
