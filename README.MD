@@ -20,3 +20,7 @@
 2. After algorithm has finished, there will be a single element left in the array.
    On the 1st, 3rd, 5th ... iterations replace each pair of consecutive elements with their sum.
    On the 2nd, 4th, 6th ... iterations replace each pair of consecutive elements with their product.
+
+3. For given array of integers, find the maximal absolute differnce between any two of its adjacent elements.
+
+4. For given an array of integers, replace all the occurrences of the element to replace with substituion element.
