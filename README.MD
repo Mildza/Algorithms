@@ -30,3 +30,5 @@
 6. n children have got m pisces of candy. They want to eat as much they ca, but each child must exactly eat the same amount of candys as any other child. Determine how many piesces of candy will be eaten by all the children together. Individual piesces of candy cannot be split.
 
 7. For a given string, check if can become a palindrome through a case of some (possibly, none) letters.
+
+8. For a given year, return the century it is in. The first century spans from the year 1 up to and including year 100, the secend from the year 101 up to and including 200.
