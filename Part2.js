@@ -96,3 +96,84 @@ const arrayReplace = (arr, el, sub) => {
   console.log(arr2);
 };
 arrayReplace([1, 2, 1], 1, 3); // elToReplace=1, subEl=3 => [3, 2, 3]
+
+//****************************************************************//
+
+// 5. For given the positions of white bishop and a black pawn on the standard chess board, determine whether the bsihop can capture the pawn in one move.
+
+const bishopPawn = (bishop, pawn) => {
+  const board = {
+    a: 1,
+    b: 2,
+    c: 3,
+    d: 4,
+    e: 5,
+    f: 6,
+    g: 7,
+    h: 8,
+  };
+  const bishopX = board[bishop[0]];
+  const bishopY = parseInt(bishop[1]);
+  const pawnX = board[pawn[0]];
+  const pawnY = parseInt(pawn[1]);
+  if (
+    bishopX + bishopY === pawnX + pawnY ||
+    bishopX + pawnY === bishopY + pawnX
+  ) {
+    console.log("The pawn is eaten");
+  } else {
+    console.log("The pawn cannot be eaten");
+  }
+};
+
+bishopPawn("a1", "c3");
+bishopPawn("d3", "f5");
+//****************************************************************//
+
+// 6. n children have got m pisces of candy. They want to eat as much they ca, but each child must exactly eat the same amount of candys as any other child.
+// Determine how many piesces of candy will be eaten by all the children together. Individual piesces of candy cannot be split.
+
+const candy = (n, m) => {
+  const candies = n * Math.floor(m / n);
+  console.log("Total candies eaten: " + candies);
+};
+candy(3, 10); // 9
+candy(4, 20); // 20
+
+// 7. For a given string, check if can become a palindrome through a case of some (possibly, none) letters.
+
+const palindrome = (str) => {
+  const orinigal = str.toLowerCase();
+  const reversed = orinigal.split("").reverse().join("");
+  if (orinigal === reversed) {
+    console.log("Its palindrome");
+  } else {
+    console.log("Its not palindrome");
+  }
+};
+palindrome("AaBaa");
+palindrome("abac");
+
+//****************************************************************//
+
+// 8. For a given year, return the century it is in. The first century spans from the year 1 up to and including year 100, the secend from the year 101 up to and including 200.
+
+const century = (year) => {
+  const century = Math.floor(year / 100);
+  const reminder = year % 100;
+
+  if (reminder === 0) {
+    console.log(century);
+  } else {
+    console.log(century + 1);
+  }
+};
+
+century(1905); // 20
+century(1700); // 17
+century(801); // 9
+century(89); // 1
+
+//****************************************************************//
+
+//****************************************************************//

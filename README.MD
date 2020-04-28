@@ -24,3 +24,9 @@
 3. For given array of integers, find the maximal absolute differnce between any two of its adjacent elements.
 
 4. For given an array of integers, replace all the occurrences of the element to replace with substituion element.
+
+5. For given the positions of white bishop and a black pawn on the standard chess board, determine whether the bsihop can capture the pawn in one move.
+
+6. n children have got m pisces of candy. They want to eat as much they ca, but each child must exactly eat the same amount of candys as any other child. Determine how many piesces of candy will be eaten by all the children together. Individual piesces of candy cannot be split.
+
+7. For a given string, check if can become a palindrome through a case of some (possibly, none) letters.
